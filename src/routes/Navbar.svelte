@@ -1,1 +1,1 @@
-<nav><p>test</p></nav>
+<nav class="py-2 px-4 bg-crust/80 backdrop-blur-md"><h1 class="navbar-h1 text-xl">Deludo</h1></nav>
