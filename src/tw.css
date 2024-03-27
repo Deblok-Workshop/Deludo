@@ -5,3 +5,11 @@
 
 
 html,body,.root {@apply w-full h-full text-text;font-family:"Inter",sans-serif;}
+
+@keyframes h1_hover {
+    0% {font-weight: 600;}
+    15% {font-weight: 300;}
+    45% {font-weight:900;}
+    100% {font-weight:600;}
+}
+nav:hover h1 {animation: 1s h1_hover;}
