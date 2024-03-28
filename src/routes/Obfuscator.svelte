@@ -19,6 +19,7 @@
         href={isHovered ? href : '#'} 
         class={className} 
         on:mouseover={handle}
+        on:mouseenter={handle}
         on:focus={handle}
         on:click={handle}
       >
