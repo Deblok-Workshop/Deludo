@@ -29,3 +29,12 @@ nav:hover h1 {
 }
 .btn.navbar-btn {@apply px-3 py-1 hover:py-[5px]  hover:px-2 rounded-lg shadow-inner ring-2 bg-blue-800/30 ring-blue-800 hover:ring-blue-700 hover:font-bold duration-300 hover:bg-blue-800/60}
 .btn.navbar-btn.active {@apply hover:px-3 py-[5px] bg-blue-800 font-semibold hover:font-extrabold hover:!bg-blue-700/60}
+
+
+@keyframes soonBold {
+  10% {font-weight:500;transform:scale(1);margin-right:0px;}
+  50% {transform:scale(1.1);margin-right:10px;margin-left:10px;}
+  100% {font-weight:900;transform:scale(1);margin-right:0px;margin-left:0px;}
+}
+
+.soonBold {animation: 0.6s soonBold forwards; animation-delay: 0.8s;display:inline-block}
