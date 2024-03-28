@@ -2,7 +2,7 @@
     import Obfuscator from "./Obfuscator.svelte";
 
 </script>
-<nav class="py-2 px-4 bg-crust/80 backdrop-blur-md flex flex-row items-center">
+<nav class="z-[10000] shadow-lg shadow-crust/30 w-full py-2 px-4 bg-crust/80 backdrop-blur-md flex flex-row items-center fixed top-0">
     <h1 class="navbar-h1 text-xl font-semibold">Deludo</h1>
     <a href="/" class="ml-4 btn navbar-btn">Home</a>
     <Obfuscator href="_a" className="ml-4 btn navbar-btn" text="Games" />
