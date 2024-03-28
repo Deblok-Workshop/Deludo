@@ -27,5 +27,5 @@ body,
 nav:hover h1 {
   animation: 1s h1_hover;
 }
-.btn.navbar-btn {@apply px-3 py-1 hover:py-[5px] mx-2 hover:px-2 rounded-lg shadow-inner ring-2 bg-blue-800/30 ring-blue-800 hover:ring-blue-700 hover:font-bold duration-300 hover:bg-blue-800/60}
+.btn.navbar-btn {@apply px-3 py-1 hover:py-[5px]  hover:px-2 rounded-lg shadow-inner ring-2 bg-blue-800/30 ring-blue-800 hover:ring-blue-700 hover:font-bold duration-300 hover:bg-blue-800/60}
 .btn.navbar-btn.active {@apply hover:px-3 py-[5px] bg-blue-800 font-semibold hover:font-extrabold hover:!bg-blue-700/60}
