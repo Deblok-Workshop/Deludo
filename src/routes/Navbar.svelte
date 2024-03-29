@@ -1,5 +1,5 @@
 <script>
-    import Obfuscator from "./Obfuscator.svelte";
+    import Obfuscator from "./Obfuscator.svelte"
 
 </script>
 <nav class="z-[10000] shadow-lg shadow-crust/30 w-full py-2 px-4 bg-crust/80 backdrop-blur-md flex flex-row items-center fixed top-0">

@@ -1,6 +1,5 @@
-<script>
-    import TextObfuscator from "./TextObfuscator.svelte"
-</script>
+
+
 
 <hero class="flex-1 w-full h-[100vh] bg-slate-900 flex flex-col ">
     <div class="flex flex-col w-full h-full ">
@@ -12,3 +11,28 @@
     </div>
 </hero>
 
+<script type="text/javascript">
+    
+    import TextObfuscator from "./TextObfuscator.svelte"
+import { onMount } from "svelte"
+onMount(() => {
+
+   
+   function alternate() {
+    let items = ["game","emulator", "flash game","retro game",""]
+    let alt = document.querySelector(".alternating")
+      alt.classList.add("alternating-anim")
+      setTimeout(()=>{
+          alt.innerText = items[Math.floor(Math.random() * items.length)]},1000)
+   }
+   setTimeout(()=>{
+    alt.classList.remove("alternating-anim")
+   })
+  setInterval(()=>{
+      alternate()
+  },4000)
+  alternate()
+
+})
+
+</script>
