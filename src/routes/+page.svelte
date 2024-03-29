@@ -21,14 +21,12 @@ onMount(() => {
    function alternate() {
     let items = ["game","emulator", "flash game","retro game",""]
     let alt = document.querySelector(".alternating")
-      alt.classList.add("alternating-anim")
+      alt.classList.toggle("alternating-anim")
       setTimeout(()=>{
           alt.innerText = items[Math.floor(Math.random() * items.length)]
         },1000)
    }
-   setTimeout(()=>{
-    alt.classList.remove("alternating-anim")
-   },3999)
+
   setInterval(()=>{
       alternate()
   },4000)

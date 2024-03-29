@@ -48,3 +48,4 @@ nav:hover h1 {
 }
 
 .alternating-anim {animation:2s alternatingClip}
+.alternating {animation:none;}
