@@ -13,7 +13,7 @@
 		}
 		setTimeout(() => {
 			alt.classList.remove('alternating-anim');
-		});
+		},2003);
 		setInterval(() => {
 			alternate();
 		}, 4000);
@@ -35,45 +35,3 @@
 	</div>
 </hero>
 
-<script type="text/javascript">
-    
-    import TextObfuscator from "@/components/TextObfuscator.svelte"
-    import { onMount } from "svelte"
-    onMount(() => {
-
-<<<<<<< HEAD
-   
-   function alternate() {
-    let items = ["game","emulator", "flash game","retro game",""]
-    let alt = document.querySelector(".alternating")
-      alt.classList.toggle("alternating-anim")
-      setTimeout(()=>{
-          alt.innerText = items[Math.floor(Math.random() * items.length)]
-        },1000)
-   }
-
-  setInterval(()=>{
-      alternate()
-  },4000)
-  alternate()
-=======
-    
-    function alternate() {
-        let items = ["game","emulator", "flash game","retro game",""]
-        let alt = document.querySelector(".alternating")
-        alt.classList.add("alternating-anim")
-        setTimeout(()=>{
-            alt.innerText = items[Math.floor(Math.random() * items.length)]},1000)
-    }
-    setTimeout(()=>{
-        alt.classList.remove("alternating-anim")
-    })
-    setInterval(()=>{
-        alternate()
-    },4000)
-    alternate()
->>>>>>> 3615d40ac4277b72a7ca515ddb93d042a20b7d12
-
-    })
-
-</script>
