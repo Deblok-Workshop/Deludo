@@ -8,7 +8,7 @@
 		<h1 class="text-4xl ">
 			Welcome to <span class="soonBold"><TextObfuscator text="Deludo" />,
 		</h1>
-		<h2 class="text-2xl  text-blue font-bold">
+		<h2 class="text-2xl  text-blue font-semilight">
 			The world's <span class="soonBold">biggest</span>
 			<TextObfuscator text="game" /> site
 		</h2>
