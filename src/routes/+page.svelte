@@ -12,6 +12,13 @@
 			The world's <span class="soonBold">biggest</span>
 			<TextObfuscator text="game" /> site
 		</h2>
+		<br><br>
+		<a href="_a" class="btn hero-btn">
+			<TextObfuscator text="Start Playing" />
+		</a>
+		<a href="_dsc" class="btn hero-btn-secondary" target="_blank">
+			<TextObfuscator text="Discord" />
+		</a>
 		</div>
 	</div>
 </hero>
