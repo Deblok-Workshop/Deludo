@@ -40,17 +40,6 @@ nav:hover h1 {
 
 .soonBold {animation: 0.6s soonBold forwards; animation-delay: 0.8s;display:inline-block}
 
-@keyframes alternatingClip {
-  0% {clip-path: inset(00px 0px 0% 0px)}
-  33% {clip-path: inset(00px 0px 100% 0px)}
-  79.99% {clip-path: inset(00px 0px 0% 0px)}
-  80% {clip-path: inset(00px 0px 0% 0px)}
-  100% {clip-path: inset(00px 0px 100% 0px)}
-}
-
-.alternating-anim {animation:2s alternatingClip}
-.alternating {animation:none;}
-
 @keyframes slideIn {
   0% {position:absolute;top:5rem;opacity:0;}
   100% {position:absolute;top:7rem;opacity:1;}
