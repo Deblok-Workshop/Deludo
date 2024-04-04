@@ -2,12 +2,11 @@ let offsetX = 0;
 let offsetY = 0;
 let isDragging = false;
 let currentDraggable:any = null;
-console.log("hai")
+
 export default () => {
     const draggables = document.querySelectorAll('.draggable');
-
-    console.log("hai 2")
     function startDragging(e:any) {
+        e.preventDefault()
         isDragging = true;
         currentDraggable = e.target;
 
