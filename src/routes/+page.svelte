@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TextObfuscator from '@/components/TextObfuscator.svelte';
+	import TextObfuscator from '../components/TextObfuscator.svelte';
 </script>
 
 <hero class="flex-1 w-full h-[100vh] bg-slate-900 flex flex-col">
