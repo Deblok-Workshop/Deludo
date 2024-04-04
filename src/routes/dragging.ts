@@ -6,6 +6,8 @@ let currentDraggable:any = null;
 export default () => {
     const draggables = document.querySelectorAll('.draggable');
     function startDragging(e:any) {
+        if (isDragging) {return}
+        e.target.classList.add("dragging")
         e.preventDefault()
         isDragging = true;
         currentDraggable = e.target;
@@ -21,25 +23,25 @@ export default () => {
 
 
     function drag(e:any) {
-        if (!isDragging || !currentDraggable) return;
+        if (!isDragging || !currentDraggable)  {
+            e.target.classList.remove("dragging")
+            return;
+        }
 
         currentDraggable.style.transform = `translate(${e.clientX - offsetX}px, ${e.clientY - offsetY}px)`;
     }
 
-    function stopDragging() {
+    function stopDragging(e:any) {
+        if (!isDragging) {return}
+        
         isDragging = false;
-
-        document.removeEventListener('mousemove', drag);
-        document.removeEventListener('mouseup', stopDragging);
+        e.target.classList.remove("dragging")
     }
 
     draggables.forEach(draggable => {
         draggable.addEventListener('mousedown', startDragging);
+        draggable.addEventListener('mouseup', stopDragging);
+        draggable.addEventListener('mousemove', drag);
     });
 
-    return () => {
-        draggables.forEach(draggable => {
-            draggable.removeEventListener('mousedown', startDragging);
-        });
-    };
 }
