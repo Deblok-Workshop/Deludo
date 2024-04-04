@@ -49,3 +49,4 @@ nav:hover h1 {
   transition: transform 0.3s all 0.2s;
 }
 .dragging {@apply !bg-black/55 !shadow-2xl}
+.bgDotContainer {transition: all 0.5s;opacity:0;}

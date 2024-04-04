@@ -1,12 +1,21 @@
+import dotted from "$lib/dotted.svg"
+
 let offsetX = 0;
 let offsetY = 0;
 let isDragging = false;
 let currentDraggable:any = null;
-
+console.log(dotted)
 export default () => {
+    document.querySelector(".bgDotContainer").style.backgroundImage = `url(${dotted})`;
     const draggables = document.querySelectorAll('.draggable');
     function startDragging(e:any) {
+// @ts-ignore
+document.querySelector(".bgDotContainer").style.backgroundImage = `url(${dotted})`;
+// @ts-ignore
+document.querySelector(".bgDotContainer").style.opacity = "0.5";
+        console.log(e.target.classList)
         if (isDragging) {return}
+        if (!e.target.classList.contains("draggable")) {return}
         e.target.classList.add("dragging")
         e.preventDefault()
         isDragging = true;
@@ -23,8 +32,14 @@ export default () => {
 
 
     function drag(e:any) {
+        if (e.target.classList.contains("draggable")) {
+            document.querySelector(".bgDotContainer").style.opacity = "0.12";
+        }
         if (!isDragging || !currentDraggable)  {
+            try {
             e.target.classList.remove("dragging")
+            
+            } catch {return;}
             return;
         }
 
@@ -32,6 +47,9 @@ export default () => {
     }
 
     function stopDragging(e:any) {
+        // if (!e.target.classList.contains("draggable")) {return}
+// @ts-ignore
+document.querySelector(".bgDotContainer").style.opacity = "0"
         if (!isDragging) {return}
         
         isDragging = false;
@@ -43,5 +61,11 @@ export default () => {
         draggable.addEventListener('mouseup', stopDragging);
         draggable.addEventListener('mousemove', drag);
     });
-
+    setInterval(()=>{
+        if (!isDragging){
+        document.querySelector(".bgDotContainer").style.opacity = "0";
+        } else {
+            document.querySelector(".bgDotContainer").style.opacity = "0.5";
+        }
+    },500)
 }
