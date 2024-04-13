@@ -1,19 +1,19 @@
 
 <script>
-    export let text = ''; 
-    export let href = ''; 
-    export let className = '';
-  
-    let isHovered = false;
-  
-    function handle() {
-      isHovered = true;
-    }
+export let text = ''; 
+export let href = ''; 
+export let className = '';
 
-    function splitText(text) {
-      return text.split('');
-    }
-    let characters = splitText(text);
+let isHovered = false;
+
+function handle() {
+  isHovered = true;
+}
+
+function splitText(text) {
+  return text.split('');
+}
+let characters = splitText(text);
   </script>
     <a 
         href={isHovered ? href : '#'} 

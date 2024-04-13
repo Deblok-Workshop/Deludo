@@ -55,12 +55,16 @@ document.querySelector(".bgDotContainer").style.opacity = "0"
         if (!isDragging) {return}
         
         isDragging = false;
+        offsetX = e.clientX - currentDraggable.getBoundingClientRect().left + 10;
+        offsetY = e.clientY - currentDraggable.getBoundingClientRect().top;
         e.target.classList.remove("dragging")
     }
 
     draggables.forEach(draggable => {
         draggable.addEventListener('mousedown', startDragging);
         draggable.addEventListener('mouseup', stopDragging);
+        draggable.addEventListener('mouseleave', stopDragging);
+      //  draggable.addEventListener('mouseout', stopDragging);
         draggable.addEventListener('mousemove', drag);
     });
     setInterval(()=>{

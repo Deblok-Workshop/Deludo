@@ -10,7 +10,7 @@ setTimeout(()=>{dragging();},500)
 <hero class="flex-1 w-full h-[100vh] bg-slate-900 flex flex-col">
 	
 	<div class="flex flex-col w-full h-full">
-		<div class="draggable p-8 rounded-xl bg-black/35 active:bg-black/55 hover:bg-black/50 active:shadow-2xl hover:shadow-2xl shadow-black/50 backdrop-blur-md absolute top-28 left-8 inline-block slideIn">
+		<div class="draggable hero-box slideIn">
 		<h1 class="text-4xl ">
 			Welcome to <span class="soonBold"><TextObfuscator text="Deludo" />,
 		</h1>
