@@ -22,8 +22,8 @@ export default () => {
         if (!currentDraggable) return;
 // @ts-ignore
 document.querySelector(".bgDotContainer").style.opacity = "0.5";
-        offsetX = e.clientX - currentDraggable.getBoundingClientRect().left;
-        offsetY = e.clientY - currentDraggable.getBoundingClientRect().top;
+        offsetX = e.clientX - currentDraggable.getBoundingClientRect().left - 60;
+        offsetY = e.clientY - currentDraggable.getBoundingClientRect().top + 60;
     }
 
 
