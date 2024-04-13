@@ -1,5 +1,5 @@
 
-<script>
+<script lang="ts">
 export let text = ''; 
 export let href = ''; 
 export let className = '';
@@ -10,7 +10,7 @@ function handle() {
   isHovered = true;
 }
 
-function splitText(text) {
+function splitText(text: string) {
   return text.split('');
 }
 let characters = splitText(text);
