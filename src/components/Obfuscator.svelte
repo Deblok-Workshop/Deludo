@@ -9,7 +9,7 @@ let isHovered = false;
 function handle() {
   isHovered = true;
 }
-
+// @ts-ignore
 function splitText(text) {
   return text.split('');
 }
