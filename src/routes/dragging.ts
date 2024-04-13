@@ -6,6 +6,8 @@ let isDragging = false;
 let currentDraggable:any = null;
 console.log(dotted)
 export default () => {
+
+    // @ts-ignore
     document.querySelector(".bgDotContainer").style.backgroundImage = `url(${dotted})`;
     const draggables = document.querySelectorAll('.draggable');
     function startDragging(e:any) {
@@ -33,12 +35,14 @@ document.querySelector(".bgDotContainer").style.opacity = "0.5";
             try {
             e.target.classList.remove("dragging")
             if (e.target.classList.contains("draggable") ) {
+                // @ts-ignore
                 document.querySelector(".bgDotContainer").style.opacity = "0.12";
             }
             } catch {return;}
             return;
         }
         if (isDragging) {
+            // @ts-ignore
             document.querySelector(".bgDotContainer").style.opacity = "0.5";
         }
         currentDraggable.style.transform = `translate(${e.clientX - offsetX}px, ${e.clientY - offsetY}px)`;
@@ -61,8 +65,10 @@ document.querySelector(".bgDotContainer").style.opacity = "0"
     });
     setInterval(()=>{
         if (!isDragging){
+            // @ts-ignore
         document.querySelector(".bgDotContainer").style.opacity = "0";
         } else {
+            // @ts-ignore
             document.querySelector(".bgDotContainer").style.opacity = "0.5";
         }
     },500)
