@@ -10,7 +10,7 @@ function handle() {
   isHovered = true;
 }
 
-function splitText(text: string) {
+function splitText(text) {
   return text.split('');
 }
 let characters = splitText(text);

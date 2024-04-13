@@ -1,5 +1,4 @@
-<script>
-// svelte intellisense this shitshow of a code is typescript. 🤦
+<script lang="ts">
 import TextObfuscator from '../components/TextObfuscator.svelte';
 import dragging from "./dragging.ts"
 setTimeout(()=>{dragging();},500)
