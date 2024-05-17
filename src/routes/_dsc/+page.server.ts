@@ -1,2 +1,2 @@
 import { redirect } from '@sveltejs/kit';
-redirect(307, 'https://deblok.link/discord');
+redirect(302, 'https://deblok.link/discord');
