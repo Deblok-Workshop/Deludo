@@ -30,7 +30,7 @@
 <h1 class="text-4xl ">
     <span class="soonBold2"><TextObfuscator text="Games" />
 </h1>
-<div class="gcontainer">
+<div class="gcontainer mx-auto">
     <Card idName="template"></Card>
   </div>
 </div>
