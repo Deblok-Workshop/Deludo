@@ -1,9 +1,11 @@
 <script lang="ts">
+    import Card from "../../components/Card.svelte";
     import TextObfuscator from "../../components/TextObfuscator.svelte";
-    import pop from "../../components/Populator"
+    import pop from "../../components/Populator.ts"
+    let assets = {"html":[],"rom":{"nes":[],"snes":[],"megadrive":[]},"flash":{}}
     setTimeout(async()=>{
-     let assets = await pop();
-     console.log(assets)
+     assets = await pop();
+     
     },33)
         
    
@@ -13,4 +15,7 @@
 <h1 class="text-4xl ">
     <span class="soonBold2"><TextObfuscator text="Games" />
 </h1>
+<div class="gcontainer">
+    <Card idName="template"></Card>
+  </div>
 </div>

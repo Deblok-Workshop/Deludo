@@ -4,6 +4,7 @@
     "allowImportingTsExtensions": true,
     "allowJs": false,
     "checkJs": false,
+    "jsx": "react-native",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
