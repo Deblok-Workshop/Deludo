@@ -15,7 +15,7 @@
     }
 </script>
 
-<div class="card p-4 rounded-xl bg-blue-900/65 inline-flex flex-row m-2 min-w-60" id={idName}>
+<div class="card p-4 rounded-xl bg-blue-800/65 inline-flex flex-row m-2 min-w-60 text-blue" id={idName}>
     <img class="w-8 h-8 m-2" src="{img}" alt="Icon">
     <div class="flex flex-col">
         <span class="flex flex-row align-middle items-center ">

@@ -17,6 +17,8 @@
         card.querySelector(".card-link").href = "/assets/handlers/html.html#"+assets.html[i].id
         // @ts-expect-error
         document.querySelector(".gcontainer").appendChild(card)
+        // @ts-expect-error
+        card.id = ""
      }
      document.querySelector("#template")?.remove();
     },33)
