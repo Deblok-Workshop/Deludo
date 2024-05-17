@@ -5,7 +5,20 @@
     let assets = {"html":[],"rom":{"nes":[],"snes":[],"megadrive":[]},"flash":{}}
     setTimeout(async()=>{
      assets = await pop();
-     
+     for (let i = 0; i < assets.html.length; i++) {
+        let templatecard = document.querySelector("#template");
+        // @ts-expect-error
+        let card = templatecard.cloneNode(true)
+        // @ts-expect-error
+        card.querySelector(".title").innerText = assets.html[i].name
+        // @ts-expect-error
+        card.querySelector(".tag").innerText = "HTML"
+        // @ts-expect-error
+        card.querySelector(".card-link").href = "/assets/handlers/html.html#"+assets.html[i].id
+        // @ts-expect-error
+        document.querySelector(".gcontainer").appendChild(card)
+     }
+     document.querySelector("#template")?.remove();
     },33)
         
    
