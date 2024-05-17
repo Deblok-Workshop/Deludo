@@ -1,9 +1,11 @@
 <script lang="ts">
     import TextObfuscator from "../../components/TextObfuscator.svelte";
     import fs from "../../components/FSHandler"
-    document.addEventListener("load",async ()=>{
+    setTimeout(async()=>{
         await fs();
-    })
+    },300)
+        
+   
 </script>
 <br><br><br>
 <div class="px-2 w-full h-full">
