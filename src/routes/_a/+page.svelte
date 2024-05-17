@@ -1,9 +1,10 @@
 <script lang="ts">
     import TextObfuscator from "../../components/TextObfuscator.svelte";
-    import fs from "../../components/FSHandler"
+    import pop from "../../components/Populator"
     setTimeout(async()=>{
-        await fs();
-    },300)
+     let assets = await pop();
+     console.log(assets)
+    },33)
         
    
 </script>

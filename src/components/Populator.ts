@@ -1,5 +1,3 @@
-import { afterNavigate } from "$app/navigation"
-
 export default (async()=>{
 let assetsHTTP = await fetch("assets/assets.json")
 let assets = await assetsHTTP.json()
@@ -10,8 +8,6 @@ for (var x in assets) {
    index.push(x);
 }
 
-
-console.log(assets)
 for (let i = 1; i < (assets.len+1); i++) {
     if (!assets[index[i]][0].type || assets[index[i]][0].type != "pointer") {
         throw new Error("Not a pointer")
@@ -27,5 +23,5 @@ for (let i = 1; i < (assets.len+1); i++) {
         assets[index[i]] = aFollow
     }
 }
-console.log(assets)
+return assets;
 })
