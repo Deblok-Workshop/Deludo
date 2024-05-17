@@ -10,6 +10,6 @@
 <br><br><br>
 <div class="px-2 w-full h-full">
 <h1 class="text-4xl ">
-    <span class="soonBold"><TextObfuscator text="Games" />
+    <span class="soonBold2"><TextObfuscator text="Games" />
 </h1>
 </div>

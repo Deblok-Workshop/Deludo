@@ -38,6 +38,8 @@ nav:hover h1 {
   100% {font-weight:900;transform:scale(1);margin-right:0px;margin-left:0px;}
 }
 
+
+.soonBold2 {animation: 0.6s soonBold forwards; animation-delay: 0.3s;display:inline-block}
 .soonBold {animation: 0.6s soonBold forwards; animation-delay: 0.8s;display:inline-block}
 
 @keyframes slideIn {
