@@ -9,29 +9,44 @@ setTimeout(async()=>{assets = await pop();
 for (let i = 0; i < assets.html.length; i++) {
     let templatecard = document.querySelector("#template");
     let card = templatecard.cloneNode(true)
+    card.querySelector("img").addEventListener("error",()=>{
+    card.querySelector("img").src = "/assets/missing.png"
+    })
     card.querySelector(".title").innerText = assets.html[i].name
     card.querySelector(".tag").innerText = "HTML"
     card.querySelector(".card-link").href = "/assets/handlers/html.html#"+assets.html[i].id
+    card.querySelector("img").src = `/assets/html/thumbs/${assets.html[i].id}.jpg`
     document.querySelector(".gcontainer").appendChild(card)
     card.id = ""}
     len += assets.flash.length
     for (let x = 0; x < assets.flash.length; x++) {
+
     let templatecard = document.querySelector("#template");
     let card = templatecard.cloneNode(true)
+    card.querySelector("img").addEventListener("error",()=>{
+    card.querySelector("img").src = "/assets/missing.png"
+    })
     card.querySelector(".title").innerText = assets.flash[x].name
     card.querySelector(".tag").innerText = "Flash"
     card.querySelector(".card-link").href = "/assets/handlers/flash.html#"+assets.flash[x].id
+    card.querySelector("img").src = `/assets/flash/thumbs/${assets.flash[x].id.split(".")[0]}_flash.jpg`
     document.querySelector(".gcontainer").appendChild(card)
-    card.id = ""}
+    card.id = ""
+}
 var idx= ["nes","snes","megadrive"];
+var fidx = ["NES","SNES","Megadrive"]
 for (let y = 0; y < idx.length; y++) {
     len += assets.rom[idx[y]].length;
 for (let b = 0; b < assets.rom[idx[y]].length; b++) {
     let templatecard = document.querySelector("#template");
     let card = templatecard.cloneNode(true)
     card.querySelector(".title").innerText = assets.rom[idx[y]][b].name
-    card.querySelector(".tag").innerText = `ROM | ${idx[y]}`
+    card.querySelector(".tag").innerText = `${fidx[y]}`
+    card.querySelector("img").src = `/assets/rom/thumbs/${assets.rom[idx[y]][b].id.split(".")[0]}_${idx[y]}.jpg`
     card.querySelector(".card-link").href = `/assets/handlers/rom.html#${idx[y]};${assets.rom[idx[y]][b].id}`
+    card.querySelector("img").addEventListener("error",()=>{
+    card.querySelector("img").src = "/assets/missing.png"
+    })
     document.querySelector(".gcontainer").appendChild(card)
     card.id = ""
 }}

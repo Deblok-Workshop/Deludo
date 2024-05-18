@@ -1,5 +1,6 @@
 <script>
     import TextObfuscator from "./TextObfuscator.svelte";
+    export let img = '/assets/missing.png'; 
     export let title = "Placeholder";
     export let data = "html;000;nes";
     export let idName = ""
@@ -14,15 +15,16 @@
 </script>
 
 <div style="max-width:460px;" class="card" id={idName}>
+    <img class="w-8 h-8 m-2" src="{img}" loading="lazy" alt="Icon">
     <div class="flex flex-col">
         <span class="flex flex-row align-middle items-center">
         <h4 class="title text-md font-medium"> <TextObfuscator text={title}></TextObfuscator> </h4>
-        <span class="tag mx-2 px-2 py-0.5 bg-blue-800 mb-2 mt-1 text-blue rounded-full text-sm font-mono w-fit">
-            {data.split(";")[0]}
-        </span>
+        
     </span>
-    
-        <a href="{href}" class="card-link btn hero-btn !py-1  !px-6 !m-0 !mt-2">
+    <span class="tag px-2 py-0.5 bg-blue-800 mb-2 mt-1 text-blue rounded-full text-sm font-mono w-fit">
+        {data.split(";")[0]}
+    </span>
+        <a href="{href}" class="card-link btn hero-btn !py-1 !px-6 !m-0 !mt-2">
         <TextObfuscator text="Play"></TextObfuscator>
         </a>
     </div>
