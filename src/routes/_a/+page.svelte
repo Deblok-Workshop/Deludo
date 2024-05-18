@@ -12,17 +12,27 @@ for (let i = 0; i < assets.html.length; i++) {
     card.querySelector(".card-link").href = "/assets/handlers/html.html#"+assets.html[i].id
     document.querySelector(".gcontainer").appendChild(card)
     card.id = ""}
-var idx= ["nes","snes","megadrive"];
-for (let i = 0; i < idx.length; i++) {
-for (let b = 0; b < assets.rom[idx[i]].length; b++) {
+    for (let x = 0; x < assets.flash.length; x++) {
     let templatecard = document.querySelector("#template");
     let card = templatecard.cloneNode(true)
-    card.querySelector(".title").innerText = assets.rom[idx[i]][b].name
-    card.querySelector(".tag").innerText = `ROM | ${idx[i]}`
-    card.querySelector(".card-link").href = `/assets/handlers/rom.html#${idx[i]};${assets.rom[idx[i]][b].id}`
+    card.querySelector(".title").innerText = assets.flash[x].name
+    card.querySelector(".tag").innerText = "Flash"
+    card.querySelector(".card-link").href = "/assets/handlers/flash.html#"+assets.flash[x].id
+    document.querySelector(".gcontainer").appendChild(card)
+    card.id = ""}
+var idx= ["nes","snes","megadrive"];
+for (let y = 0; y < idx.length; y++) {
+for (let b = 0; b < assets.rom[idx[y]].length; b++) {
+    let templatecard = document.querySelector("#template");
+    let card = templatecard.cloneNode(true)
+    card.querySelector(".title").innerText = assets.rom[idx[y]][b].name
+    card.querySelector(".tag").innerText = `ROM | ${idx[y]}`
+    card.querySelector(".card-link").href = `/assets/handlers/rom.html#${idx[y]};${assets.rom[idx[y]][b].id}`
     document.querySelector(".gcontainer").appendChild(card)
     card.id = ""
-}}document.querySelector("#template")?.remove();},33)
+}}
+document.querySelector("#template").remove();
+},33)
 </script>
 <br><br><br>
 <div class="px-2 w-full h-full">
