@@ -15,7 +15,7 @@
 </script>
 
 <div style="max-width:460px;" class="card" id={idName}>
-    <img class="w-8 h-8 m-2" src="{img}" loading="lazy" alt="Icon">
+    <img class="w-14 h-14 m-2" src="{img}" loading="lazy" alt="Icon">
     <div class="flex flex-col">
         <span class="flex flex-row align-middle items-center">
         <h4 class="title text-md font-medium"> <TextObfuscator text={title}></TextObfuscator> </h4>
