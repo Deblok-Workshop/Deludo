@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import Card from "../../components/Card.svelte";
     import TextObfuscator from "../../components/TextObfuscator.svelte";
     import pop from "../../components/Populator.ts"
@@ -7,20 +7,36 @@
      assets = await pop();
      for (let i = 0; i < assets.html.length; i++) {
         let templatecard = document.querySelector("#template");
-        // @ts-expect-error
+        
         let card = templatecard.cloneNode(true)
-        // @ts-expect-error
+        
         card.querySelector(".title").innerText = assets.html[i].name
-        // @ts-expect-error
+        
         card.querySelector(".tag").innerText = "HTML"
-        // @ts-expect-error
+        
         card.querySelector(".card-link").href = "/assets/handlers/html.html#"+assets.html[i].id
-        // @ts-expect-error
+        
         document.querySelector(".gcontainer").appendChild(card)
-        // @ts-expect-error
+        
         card.id = ""
      }
+
+    var idx= [
+        "nes","snes","megadrive"
+    ];
+    for (let i = 0; i < idx.length; i++) {
+     for (let b = 0; b < assets.rom[idx[i]].length; b++) {
+        let templatecard = document.querySelector("#template");
+        let card = templatecard.cloneNode(true)
+        card.querySelector(".title").innerText = assets.rom[idx[i]][b].name
+        card.querySelector(".tag").innerText = `ROM | ${idx[i]}`
+        card.querySelector(".card-link").href = `/assets/handlers/rom.html#${idx[i]};${assets.rom[idx[i]][b].id}`
+        document.querySelector(".gcontainer").appendChild(card)
+        card.id = ""
+     }
+    }
      document.querySelector("#template")?.remove();
+
     },33)
         
    
