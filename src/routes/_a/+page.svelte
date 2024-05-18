@@ -52,12 +52,25 @@ for (let b = 0; b < assets.rom[idx[y]].length; b++) {
 }}
 document.querySelector("#template").remove();
 console.log(len)
+setTimeout(()=>{
+    document.querySelector(".loadingOverlay").style.opacity = 0; 
+    setTimeout(()=>{
+        document.querySelector(".loadingOverlay").remove();
+    },350)
+},2000)
 },33)
+
 </script>
 <br><br><br>
+<div class=" duration-300 loadingOverlay z-10 fixed top-0 left-0 px-2 w-full h-full backdrop-blur-lg bg-blue-900/30 flex flex-col justify-center items-center">
+    <h2 class="text-4xl">
+        Loading <span class="soonBold2"><TextObfuscator text="games" /></span>...
+    </h2>
+
+</div>
 <div class="px-2 w-full h-full">
 <h1 class="text-4xl ">
-    <span class="soonBold2"><TextObfuscator text="Games" />
+    <span class="soonBold"><TextObfuscator text="Games" /></span>
 </h1>
 <div class="gcontainer mx-auto w-fit">
     <Card idName="template"></Card>
