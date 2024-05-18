@@ -1,5 +1,4 @@
 <script>
-    import Obfuscator from "./Obfuscator.svelte"
     import TextObfuscator from "./TextObfuscator.svelte";
     export let img = '/assets/missing.png'; 
     export let title = "Placeholder";
