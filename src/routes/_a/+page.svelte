@@ -44,7 +44,7 @@ console.log(len)
 <h1 class="text-4xl ">
     <span class="soonBold2"><TextObfuscator text="Games" />
 </h1>
-<div class="gcontainer mx-auto">
+<div class="gcontainer mx-auto w-fit">
     <Card idName="template"></Card>
   </div>
 </div>

@@ -7,6 +7,6 @@
     <h1 class="navbar-h1 text-xl font-semibold"><TextObfuscator text="Deludo"/></h1>
     <a href="/" class="ml-4 btn navbar-btn">Home</a>
     <Obfuscator href="_a" className="ml-4 btn navbar-btn" text="Games" />
-    <Obfuscator href="_b" className="ml-4 btn navbar-btn" text="Emulators" />
+    <Obfuscator href="_b" className="ml-4 btn navbar-btn" text="Emulator" />
     <Obfuscator href="_s" className="ml-4 btn navbar-btn" text="Settings" />
 </nav>
