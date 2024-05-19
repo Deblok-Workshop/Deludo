@@ -56,6 +56,7 @@ setTimeout(()=>{
     document.querySelector(".loadingOverlay").style.opacity = 0; 
     setTimeout(()=>{
         document.querySelector(".loadingOverlay").remove();
+        document.querySelector(".title span").classList.add("soonBold2")
     },350)
 },2000)
 },33)
@@ -69,8 +70,8 @@ setTimeout(()=>{
 
 </div>
 <div class="px-2 w-full h-full">
-<h1 class="text-4xl ">
-    <span class="soonBold"><TextObfuscator text="Games" /></span>
+<h1 class="text-4xl title">
+    <span ><TextObfuscator text="Games" /></span>
 </h1>
 <div class="gcontainer mx-auto w-fit">
     <Card idName="template"></Card>
