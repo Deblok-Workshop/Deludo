@@ -62,7 +62,7 @@ setTimeout(()=>{
 },33)
 
 </script>
-<br><br><br>
+
 <div class=" duration-300 loadingOverlay z-10 fixed top-0 left-0 px-2 w-full h-full backdrop-blur-lg bg-blue-900/30 flex flex-col justify-center items-center">
     <h2 class="text-4xl">
         Loading <span class="soonBold2"><TextObfuscator text="games" /></span>...
@@ -70,6 +70,7 @@ setTimeout(()=>{
 
 </div>
 <div class="px-2 w-full h-full">
+    <br><br><br>
 <h1 class="text-4xl title">
     <span ><TextObfuscator text="Games" /></span>
 </h1>
