@@ -72,12 +72,14 @@ setTimeout(()=>{
 </div>
 <div class="px-2 w-full h-full">
     <br><br><br>
-<h1 class="text-4xl title">
+<h1 class="text-4xl title text-center">
     <span ><TextObfuscator text="Games" /></span>
 </h1>
-<div class="searchContainer mx-auto w-full">
-    <input type="search" id="searchInput" on:keyup={search} placeholder="Search" class="px-2 rounded-full bg-surface0 hover:bg-surface1 duration-200 py-1">
+<br>
+<div class="searchContainer w-full flex flex-row justify-center items-center">
+    <input type="search" id="searchInput" on:keyup={search} placeholder="Search" class="shadow-sm hover:shadow-md ring-2 ring-surface0 hover:ring-mauve shadow-black/15 px-4 rounded-full bg-surface0 hover:bg-surface1 duration-200 py-1">
 </div>
+<br>
 <div class="gcontainer mx-auto w-fit">
     <Card idName="template"></Card>
   </div>

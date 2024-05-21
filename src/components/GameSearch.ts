@@ -9,7 +9,7 @@ function search() {
       txtValue = e.textContent || e.innerText;
       tag = li[i].querySelector("span.tag")
       tagValue = tag.textContent || tag.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1 || tagValue.toUpperCase().indexOf(filter) > -1) {
+      if (txtValue.toUpperCase().indexOf(filter) > -1 || tagValue.toLowerCase() == filter.toLowerCase()) {
         li[i].style.display = "";
       } else {
         li[i].style.display = "none";
