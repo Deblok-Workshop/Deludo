@@ -2,6 +2,7 @@
 import Card from "../../components/Card.svelte";
 import TextObfuscator from "../../components/TextObfuscator.svelte";
 import pop from "../../components/Populator.ts"
+import search from "../../components/GameSearch.ts";
 let assets = {"html":[],"rom":{"nes":[],"snes":[],"megadrive":[]},"flash":{}}
 let len = 0;
 setTimeout(async()=>{assets = await pop();
@@ -74,6 +75,9 @@ setTimeout(()=>{
 <h1 class="text-4xl title">
     <span ><TextObfuscator text="Games" /></span>
 </h1>
+<div class="searchContainer mx-auto w-full">
+    <input type="search" id="searchInput" on:keyup={search} placeholder="Search" class="px-2 rounded-full bg-surface0 hover:bg-surface1 duration-200 py-1">
+</div>
 <div class="gcontainer mx-auto w-fit">
     <Card idName="template"></Card>
   </div>
