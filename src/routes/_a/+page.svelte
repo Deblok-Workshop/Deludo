@@ -77,7 +77,18 @@ setTimeout(()=>{
 </h1>
 <br>
 <div class="searchContainer w-full flex flex-row justify-center items-center">
-    <input type="search" id="searchInput" on:keyup={search} placeholder="Search" class="shadow-sm hover:shadow-md ring-2 ring-surface0 hover:ring-mauve shadow-black/15 px-4 rounded-full bg-surface0 hover:bg-surface1 duration-200 py-1">
+    <input type="search" id="searchInput" on:keyup={search} placeholder="Search" class="input">
+    <span class="mr-1">Filter:</span>
+    <select class="input hover:ring-green !py-1.5" placeholder="Filter by...">
+        <option selected>All</option>
+        <option disabled>Emulators ----</option>
+        <option >NES</option>
+        <option >SNES</option>
+        <option >Megadrive</option>
+        <option disabled>Other --------</option>
+        <option >HTML</option>
+        <option >Flash</option>
+    </select>
 </div>
 <br>
 <div class="gcontainer mx-auto w-fit">
