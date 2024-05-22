@@ -32,6 +32,7 @@ loader();
         <option disabled>Other --------</option>
         <option >HTML</option>
         <option >Flash</option>
+        <option value="Playables">YT Playables</option>
     </select>
 </div>
 <br>
