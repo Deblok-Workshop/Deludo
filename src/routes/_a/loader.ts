@@ -81,7 +81,7 @@ export default (()=>{
         for (var x in assets.yt_playables) {
            pidx.push(x);
         }
-        
+        len += pidx.length;
         for (let c = 0; c < pidx.length; c++) {
             let templatecard = document.querySelector("#template");
             let card = templatecard.cloneNode(true)

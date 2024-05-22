@@ -26,13 +26,13 @@ loader();
     <select class="input hover:ring-green !py-1.5 tagFilter font-mono" placeholder="Filter by..." on:change={search} on:mouseleave={search}>
         <option selected>All</option>
         <option disabled>Emulators ----</option>
-        <option >NES</option>
-        <option >SNES</option>
-        <option >Megadrive</option>
+        <option value="NES"><TextObfuscator text="Flash" /></option>
+        <option value="SNES"><TextObfuscator text="SNES" /></option>
+        <option value="Megadrive"><TextObfuscator text="Megadrive" /></option>
         <option disabled>Other --------</option>
-        <option >HTML</option>
-        <option >Flash</option>
-        <option value="Playables">YT Playables</option>
+        <option value="HTML"><TextObfuscator text="HTML" /></option>
+        <option value="Flash"><TextObfuscator text="Flash" /></option>
+        <option value="Playable"><TextObfuscator text="YT Playables" /></option>
     </select>
 </div>
 <br>
