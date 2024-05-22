@@ -1,5 +1,7 @@
 function search() {
     let input, filter, li, e, i, tag, tagValue, txtValue;
+    // @ts-expect-error
+    let tagFilter = document.querySelector(".tagFilter").value || "All"
     input = document.getElementById('searchInput');
     // @ts-expect-error
     filter = input.value.toUpperCase();
@@ -12,8 +14,14 @@ function search() {
       tag = li[i].querySelector("span.tag")
       // @ts-expect-error
       tagValue = tag.textContent || tag.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1 || tagValue.toLowerCase() == filter.toLowerCase()) {
-        li[i].style.display = "";
+      if ((txtValue.toUpperCase().indexOf(filter) > -1 || tagValue.toLowerCase() == filter.toLowerCase())) {
+        if (tagFilter.toLowerCase() != "all") {
+        if (tagValue.toLowerCase() == tagFilter.toLowerCase()) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      } else {li[i].style.display = "";}
       } else {
         li[i].style.display = "none";
       }

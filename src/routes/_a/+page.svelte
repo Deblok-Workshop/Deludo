@@ -79,7 +79,7 @@ setTimeout(()=>{
 <div class="searchContainer w-full flex flex-row justify-center items-center">
     <input type="search" id="searchInput" on:keyup={search} placeholder="Search" class="input">
     <span class="mr-1">Filter:</span>
-    <select class="input hover:ring-green !py-1.5" placeholder="Filter by...">
+    <select class="input hover:ring-green !py-1.5 tagFilter" placeholder="Filter by..." on:change={search} on:mouseleave={search}>
         <option selected>All</option>
         <option disabled>Emulators ----</option>
         <option >NES</option>
