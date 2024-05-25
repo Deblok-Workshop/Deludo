@@ -68,7 +68,7 @@ export default (()=>{
             card.querySelector(".title").innerText = assets.rom[idx[y]][b].name
             card.querySelector(".tag").innerText = `${fidx[y]}`
             card.querySelector("img").src = `/assets/rom/thumbs/${assets.rom[idx[y]][b].id.split(".")[0]}_${idx[y]}.jpg`
-            card.querySelector(".card-link").href = `/_x#${btoa(fidx[y])}||${btoa(`/assets/handlers/rom.html#${idx[y]};${assets.rom[idx[y]][b].id}`)}`
+            card.querySelector(".card-link").href = `/_x#${btoa(assets.rom[idx[y]][b].name)}||${btoa(`/assets/handlers/rom.html#${idx[y]};${assets.rom[idx[y]][b].id}`)}`
             card.querySelector("img").addEventListener("error",()=>{
             card.querySelector("img").src = "/assets/missing.png"
             })
