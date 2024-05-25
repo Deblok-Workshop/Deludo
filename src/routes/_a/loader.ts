@@ -31,7 +31,7 @@ export default (()=>{
             
             card.querySelector(".tag").innerText = "HTML"
             
-            card.querySelector(".card-link").href = "/assets/handlers/html.html#"+assets.html[i].id
+            card.querySelector(".card-link").href = `/_x#${btoa(assets.html[i].name)}||${btoa("/assets/handlers/html.html#"+assets.html[i].id)}`
             
             card.querySelector("img").src = `/assets/html/thumbs/${assets.html[i].id}.jpg`
             
@@ -53,7 +53,7 @@ export default (()=>{
             })
             card.querySelector(".title").innerText = assets.flash[x].name
             card.querySelector(".tag").innerText = "Flash"
-            card.querySelector(".card-link").href = "/assets/handlers/flash.html#"+assets.flash[x].id
+            card.querySelector(".card-link").href = `/_x#${btoa(assets.flash[x].name)}||${btoa("/assets/handlers/flash.html#"+assets.flash[x].id)}`
             card.querySelector("img").src = `/assets/flash/thumbs/${assets.flash[x].id.split(".")[0]}_flash.jpg`
             document.querySelector(".gcontainer").appendChild(card)
             card.id = ""
@@ -68,7 +68,7 @@ export default (()=>{
             card.querySelector(".title").innerText = assets.rom[idx[y]][b].name
             card.querySelector(".tag").innerText = `${fidx[y]}`
             card.querySelector("img").src = `/assets/rom/thumbs/${assets.rom[idx[y]][b].id.split(".")[0]}_${idx[y]}.jpg`
-            card.querySelector(".card-link").href = `/assets/handlers/rom.html#${idx[y]};${assets.rom[idx[y]][b].id}`
+            card.querySelector(".card-link").href = `/_x#${btoa(fidx[y])}||${btoa(`/assets/handlers/rom.html#${idx[y]};${assets.rom[idx[y]][b].id}`)}`
             card.querySelector("img").addEventListener("error",()=>{
             card.querySelector("img").src = "/assets/missing.png"
             })
@@ -88,7 +88,7 @@ export default (()=>{
             card.querySelector(".title").innerText = toUpper(pidx[c].replaceAll("-"," "))
             card.querySelector(".tag").innerText = `Playable`
             card.querySelector("img").style.display = "none"; // will work on thubms later
-            card.querySelector(".card-link").href = assets.yt_playables[pidx[c]]
+            card.querySelector(".card-link").href = `/_x#${btoa(toUpper(pidx[c].replaceAll("-"," ")))}||${btoa(assets.yt_playables[pidx[c]])}`
             document.querySelector(".gcontainer").appendChild(card)
             card.id = ""
         }
