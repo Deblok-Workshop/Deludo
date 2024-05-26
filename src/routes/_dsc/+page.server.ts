@@ -1,2 +1,2 @@
-import { redirect } from '@sveltejs/kit';
-redirect(302, 'https://deblok.link/discord');
+export const ssr = false
+export const csr = true
