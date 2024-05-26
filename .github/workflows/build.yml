@@ -38,8 +38,9 @@ jobs:
 
           # git pull origin gh-pages --allow-unrelated-histories
 
-      - name: Update Deludo Assets
+      - name: Update Deludo repos
         run: |
+            git pull
             cd static/assets
             git pull
             cd ../..
