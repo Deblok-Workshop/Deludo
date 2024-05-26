@@ -88,7 +88,8 @@ export default (()=>{
             card.querySelector(".title").innerText = toUpper(pidx[c].replaceAll("-"," "))
             card.querySelector(".tag").innerText = `Playable`
             card.querySelector("img").style.display = "none"; // will work on thubms later
-            card.querySelector(".card-link").href = `/_x#${btoa(toUpper(pidx[c].replaceAll("-"," ")))}||${btoa(assets.yt_playables[pidx[c]])}`
+            card.querySelector(".card-link").href = assets.yt_playables[pidx[c]]
+            card.querySelector(".card-link").target = "_blank"
             document.querySelector(".gcontainer").appendChild(card)
             card.id = ""
         }
