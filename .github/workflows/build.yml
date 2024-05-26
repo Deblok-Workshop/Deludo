@@ -1,6 +1,7 @@
 name: Build and Deploy
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,7 +12,8 @@ jobs:
 
     steps:
       - name: Git clone the repo MANUALLY
-        run: git clone --recurse-submodules -j8 https://github.com/Deblok-Workshop/Deludo
+        run: |
+         git clone --recurse-submodules -j8 https://github.com/Deblok-Workshop/Deludo
 
 
       - name: Setup Node.js
