@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
+      - name: Git clone the repo MANUALLY
+        run: git clone --recurse-submodules -j8 https://github.com/Deblok-Workshop/Deludo
 
 
       - name: Setup Node.js
