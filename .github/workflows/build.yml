@@ -33,8 +33,10 @@ jobs:
           git config --global user.name "GitHub Actions"
 
       - name: Commit build changes
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git checkout -b gh-pages -f
-          git add ./build -f
-          git commit -m "Deploying build to gh-pages"
-          git push origin gh-pages
+            git checkout -b gh-pages -f
+            git add ./build -f
+            git commit -m "Deploying build to gh-pages"
+            git push origin gh-pages
