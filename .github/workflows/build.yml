@@ -47,9 +47,8 @@ jobs:
             mv ../build .
             git checkout -b gh-pages -f
             git add ./build -f
-            git commit -m "build: Deploying build to gh-pages"
-            git submodule deinit -f -- build/assets
             git rm --cached build/assets
+            git commit -m "build: Deploying build to gh-pages"
             git push origin gh-pages --force
             
 
