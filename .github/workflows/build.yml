@@ -38,6 +38,12 @@ jobs:
 
           # git pull origin gh-pages --allow-unrelated-histories
 
+      - name: Update Deludo Assets
+        run: |
+            cd static/assets
+            git pull
+            cd ../..
+
       - name: Commit build changes
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,6 +53,9 @@ jobs:
             mv ../build .
             git checkout -b gh-pages -f
             git add ./build -f
+            cd build/assets
+            git pull
+            cd ../..
             git rm -f --cached build/assets
             rm -rf build/assets/.git
             git add -f build/assets
