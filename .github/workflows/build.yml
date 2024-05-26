@@ -41,6 +41,9 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+            mv ./build ..
+            rm -rf *
+            mv ../build .
             git checkout -b gh-pages -f
             git add ./build -f
             git commit -m "Deploying build to gh-pages"
