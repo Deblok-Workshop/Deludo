@@ -51,7 +51,7 @@ jobs:
             mv ./build ..
             rm -rf *
             mv ../build .
-            git checkout -b gh-pages -f
+            git checkout -b pages -f
             git add ./build -f
             cd build/assets
             git pull
@@ -59,7 +59,7 @@ jobs:
             git rm -f --cached build/assets
             rm -rf build/assets/.git
             git add -f build/assets
-            git commit -m "build: Deploying build to gh-pages"
-            git push origin gh-pages --force
+            git commit -m "build: Deploy build [ @$(date +%s) id:$(od -An -tx1 -N4 /dev/urandom | tr -d ' \n' | sed 's/../&/g')]"
+            git push origin pages --force
             
 
