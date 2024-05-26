@@ -48,7 +48,7 @@ jobs:
             git checkout -b gh-pages -f
             git add ./build -f
             git rm -f --cached build/assets
-            git add build/assets
+            git add -f build/assets
             git commit -m "build: Deploying build to gh-pages"
             git push origin gh-pages --force
             
