@@ -1,6 +1,6 @@
 <script lang="ts">
 import TextObfuscator from '../components/TextObfuscator.svelte';
-import dragging from "./dragging.ts"
+import dragging from "../lib/dragging.ts"
 setTimeout(()=>{dragging();},500)
 	
 
