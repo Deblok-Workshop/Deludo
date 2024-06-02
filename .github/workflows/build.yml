@@ -40,9 +40,9 @@ jobs:
 
       - name: Update Deludo repos
         run: |
-            git pull
+            git pull --force --allow-unrelated-histories
             cd static/assets
-            git pull
+            git pull --force --allow-unrelated-histories
             cd ../..
 
       - name: Commit build changes
