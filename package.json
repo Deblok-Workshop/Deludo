@@ -37,7 +37,7 @@
     "@sveltejs/adapter-static": "^3.0.1",
     "@types/node": "^20.12.4",
     "@types/react": "^18.3.2",
-    "lucide-svelte": "^0.379.0",
+    "lucide-svelte": "^0.383.0",
     "react": "^18.3.1",
     "svelte-meta-tags": "^3.1.2",
     "ts-node": "^10.9.2",
